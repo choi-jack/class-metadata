@@ -29,7 +29,7 @@ Developed using the following versions of Node.js and TypeScript:
 2. Import the `reflect-metadata` package into your application entry point.
 
     - It should be imported only once in the entire application, and before other packages.
-    - If you distribute a module as a package, you must not import it and install it as a development dependency.
+    - If you distribute a module as a package, it must not be imported and must be installed as a development dependency.
 
     ```typescript
     import 'reflect-metadata';
