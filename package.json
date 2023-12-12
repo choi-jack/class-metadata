@@ -1,6 +1,6 @@
 {
     "name": "class-metadata",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Reflection based on TypeScript's experimental support for stage 2 decorators and metadata.",
     "keywords": [
         "aop",
