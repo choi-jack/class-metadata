@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/no-extraneous-class */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-useless-constructor */
 import { describe, expect, test } from '@jest/globals';
 
 import { Metadata } from './metadata.js';
@@ -132,7 +136,7 @@ test('reflection', (): void => {
                 decorator(metadata);
                 designType(metadata, Boolean);
             })
-            _staticMethodParameter1: boolean,
+            staticMethodParameter1: boolean,
 
             @Metadata.decorator((metadata: Metadata): void => {
                 owner(metadata, Class, 'staticMethod', 1);
@@ -140,7 +144,7 @@ test('reflection', (): void => {
                 designType(metadata, Symbol);
             })
             @Metadata.decorator((): void => { })
-            _staticMethodParameter2: symbol,
+            staticMethodParameter2: symbol,
         ): number {
             return 0;
         }
@@ -158,14 +162,14 @@ test('reflection', (): void => {
                 decorator(metadata);
                 designType(metadata, BigInt);
             })
-            _constructorParameter1: bigint,
+            constructorParameter1: bigint,
 
             @Metadata.decorator((metadata: Metadata): void => {
                 owner(metadata, Class, null, 1);
                 decorator(metadata);
                 designType(metadata, Array);
             })
-            _constructorParameter2: [],
+            constructorParameter2: [],
         ) {
             this.instanceProperty = 0;
         }
@@ -185,14 +189,14 @@ test('reflection', (): void => {
                 decorator(metadata);
                 designType(metadata, Symbol);
             })
-            _constructorParameter1: symbol,
+            constructorParameter1: symbol,
 
             @Metadata.decorator((metadata: Metadata): void => {
                 owner(metadata, Class.prototype, 'instanceMethod', 1);
                 decorator(metadata);
                 designType(metadata, Boolean);
             })
-            __dirnameconstructorParameter2: boolean,
+            constructorParameter2: boolean,
         ): string {
             return '';
         }

@@ -12,7 +12,7 @@ export class ClassParameterMetadataHandler implements Handler {
     }
 
     public has(key: unknown): boolean {
-        return this.metadata.has(key)
+        return this.metadata.has(key);
     }
 
     public get<T>(key: unknown): T | null {

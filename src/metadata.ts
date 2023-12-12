@@ -110,7 +110,7 @@ export class Metadata implements Handler {
         };
     }
 
-    public readonly target: Object;
+    public readonly target: object;
     public readonly propertyKey: null | PropertyKey;
     public readonly parameterIndex: null | number;
 
