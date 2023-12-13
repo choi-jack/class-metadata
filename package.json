@@ -16,6 +16,9 @@
     ],
     "type": "module",
     "exports": "./dist/index.js",
+    "engines": {
+        "node": ">=16"
+    },
     "scripts": {
         "lint": "eslint ./src",
         "test": "jest",
