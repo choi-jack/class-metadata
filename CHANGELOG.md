@@ -1,3 +1,7 @@
+## [0.1.1](https://github.com/choi-jack/class-metadata/compare/v0.1.0...v0.1.1) (2023-12-13)
+
+
+
 # 0.1.0 (2023-12-12)
 
 
