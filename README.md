@@ -11,12 +11,12 @@ If you are unfamiliar with decorators and metadata, I recommend checking out the
 
 ### Prerequisites
 
-Developed using the following versions of Node.js and TypeScript:
+The following versions of Node.js and TypeScript are required:
 
-- Node.js 20
-- TypeScript 5.2
+- Node.js 16 or higher
+- TypeScript 4.7 or higher
 
-> Older versions may work, but have not been tested.
+This package is [pure ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c), and you must configure your project to use the ESM package.
 
 ### Installation
 
@@ -266,4 +266,4 @@ metadata.decorate([
 
 ## License
 
-MIT
+Distributed under the MIT License. See the [LICENSE](https://github.com/choi-jack/class-metadata/blob/main/LICENSE) file for more details.
