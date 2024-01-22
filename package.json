@@ -20,7 +20,7 @@
         "node": ">=16"
     },
     "scripts": {
-        "lint": "eslint ./src",
+        "lint": "eslint ./src ./test",
         "test": "jest",
         "prebuild": "npm run clean",
         "build": "tsc -p ./tsconfig.build.json",
