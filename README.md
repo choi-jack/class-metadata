@@ -28,12 +28,12 @@ This package is [pure ESM](https://gist.github.com/sindresorhus/a39789f98801d908
 
 2. Import the `reflect-metadata` package into your application entry point.
 
-    - It should be imported only once in the entire application, and before other packages.
-    - If you distribute a module as a package, it must not be imported and must be installed as a development dependency.
-
     ```typescript
     import 'reflect-metadata';
     ```
+
+    - It should be imported only once in the entire application, and before other packages.
+    - If you distribute a module as a package, it must not be imported and must be installed as a development dependency.
 
 3. Set compiler options in your `tsconfig.json` to enable experimental support for stage 2 decorators and metadata.
 
@@ -50,8 +50,7 @@ This package is [pure ESM](https://gist.github.com/sindresorhus/a39789f98801d908
 
 You can read and write metadata through a metadata instance that wraps the metadata reflection API of the `reflect-metadata` package.
 
-1. Get a metadata instance for a class, its members, and parameters with the `Metadata.of` method.
-2. Read and write metadata through the metadata instance.
+Get a metadata instance for a class, its members, and parameters with the `Metadata.of` method.
 
 ```typescript
 import { Metadata } from 'class-metadata';
@@ -100,7 +99,7 @@ Metadata.of(Class.prototype, 'instanceMethod', 0);
 
 ### Inheritance
 
-Metadata inheritance is handled transparently along the prototype chain.
+You can read metadata from a parent class from a child class, as shown in the following example.
 
 ```typescript
 @Decorator()
@@ -133,12 +132,11 @@ expect(childMetadata.get('foo')).toBe('baz');
 expect(childMetadata.getOwn('foo')).toBe('baz');
 ```
 
-### Parameter metadata
+### Parameter Metadata
 
 TypeScript and the `reflect-metadata` package do not have parameter metadata support, but this package extends the metadata functionality to support parameter metadata.
 
-- Inheritance is equally supported.
-- If possible, the `design:type` metadata value is automatically set to the parameter type.
+If `design:paramtypes` metadata is emitted, the `design:type` metadata is set in the parameters metadata.
 
 ```typescript
 @Decorator()
@@ -190,7 +188,7 @@ Metadata.parametersOf(Class, 'staticMethod');
 Metadata.parametersOf(Class.prototype, 'instanceMethod');
 ```
 
-### Decorator
+### Decorators
 
 You can easily create decorators and decorate them anywhere in your class.
 
