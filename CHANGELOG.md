@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/choi-jack/class-metadata/compare/v0.1.2...v0.2.0) (2024-07-29)
+
+
+### Features
+
+* Rewrite package ([a5b6d46](https://github.com/choi-jack/class-metadata/commit/a5b6d4644ea8e7081d40e9c4987ebb42c7abd263))
+
+
+
 ## [0.1.2](https://github.com/choi-jack/class-metadata/compare/v0.1.1...v0.1.2) (2024-06-14)
 
 
