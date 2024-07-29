@@ -10,9 +10,4 @@ export default tseslint.config(
             'dist',
         ],
     },
-    {
-        rules: {
-            '@stylistic/indent': 'off',
-        },
-    },
 );
