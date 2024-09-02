@@ -1,5 +1,5 @@
 import { MetadataType } from './metadata-type.js';
-import { Class } from './types.js';
+import { Class, PropertyKey } from './types.js';
 
 export abstract class Metadata {
     public abstract readonly declaringClass: Class;

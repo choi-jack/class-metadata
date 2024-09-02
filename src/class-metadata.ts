@@ -1,6 +1,6 @@
 import { MetadataType } from './metadata-type.js';
 import { Metadata } from './metadata.js';
-import { Class } from './types.js';
+import { Class, PropertyKey } from './types.js';
 
 // eslint-disable-next-line @typescript-eslint/no-namespace
 declare namespace Reflect {

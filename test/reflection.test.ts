@@ -1,6 +1,6 @@
 import { describe, expect, test } from '@jest/globals';
 
-import { Class, Metadata, MetadataReflector } from '../src/index.js';
+import { Class, Metadata, MetadataReflector, PropertyKey } from '../src/index.js';
 import { Parent } from './classes.js';
 import { getTarget } from './utils.js';
 

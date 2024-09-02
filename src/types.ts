@@ -4,4 +4,6 @@ export interface Class<Instance extends object = object> {
     readonly prototype: Instance;
 }
 
+export type PropertyKey = string | symbol;
+
 export type Decorator = ClassDecorator & PropertyDecorator & MethodDecorator & ParameterDecorator;

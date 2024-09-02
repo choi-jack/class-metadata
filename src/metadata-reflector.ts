@@ -3,7 +3,7 @@ import { ClassParameterMetadata } from './class-parameter-metadata.js';
 import { DesignMetadataKeys } from './design-metadata-keys.js';
 import { MetadataKey } from './metadata-key.js';
 import { Metadata } from './metadata.js';
-import { Class, Decorator } from './types.js';
+import { Class, Decorator, PropertyKey } from './types.js';
 
 const CLASS_METADATA: MetadataKey<ClassMetadata> = new MetadataKey('class-metadata');
 const CLASS_PARAMETER_METADATA_MAP: MetadataKey<Map<number, ClassParameterMetadata>> = new MetadataKey('class-parameter-metadata-map');

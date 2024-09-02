@@ -1,6 +1,6 @@
 import { MetadataType } from './metadata-type.js';
 import { Metadata } from './metadata.js';
-import { Class } from './types.js';
+import { Class, PropertyKey } from './types.js';
 
 export class ClassParameterMetadata extends Metadata {
     readonly #map: Map<unknown, unknown>;
