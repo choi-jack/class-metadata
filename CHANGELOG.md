@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/choi-jack/class-metadata/compare/v0.2.0...v0.3.0) (2024-09-02)
+
+
+### Features
+
+* Change property key type ([fe3ca4b](https://github.com/choi-jack/class-metadata/commit/fe3ca4b6132b2f043faeaeb7c6986dd459993cf6))
+
+
+
 # [0.2.0](https://github.com/choi-jack/class-metadata/compare/v0.1.2...v0.2.0) (2024-07-29)
 
 
