@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/choi-jack/class-metadata/compare/v0.3.0...v0.4.0) (2025-05-12)
+
+
+### Features
+
+* Add `decorate` method ([cd562cb](https://github.com/choi-jack/class-metadata/commit/cd562cb1ebbfcbaeaf7131063fecaa9c73ba9454))
+
+
+
 # [0.3.0](https://github.com/choi-jack/class-metadata/compare/v0.2.0...v0.3.0) (2024-09-02)
 
 
