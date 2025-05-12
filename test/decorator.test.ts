@@ -8,6 +8,14 @@ import { Decorator, Metadata, MetadataReflector } from '../src/index.js';
 function Decorator(expected: Metadata): Decorator {
     return MetadataReflector.createDecorator((received: Metadata): void => {
         expect(received).toBe(expected);
+
+        received.decorate([
+            (target: object, propertyKey?: PropertyKey, descriptorOrParameterIndex?: PropertyDescriptor | number): void => {
+                expect(target).toBe(received.target);
+                expect(propertyKey).toBe(received.propertyKey ?? undefined);
+                expect(descriptorOrParameterIndex).toBe(received.parameterIndex ?? undefined);
+            },
+        ]);
     });
 }
 

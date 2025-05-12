@@ -16,4 +16,6 @@ export abstract class Metadata {
     public abstract set<Key>(key: Key, value: MetadataType<Key>): void;
 
     public abstract delete(key: unknown): void;
+
+    public abstract decorate(decorators: ReadonlyArray<ClassDecorator | PropertyDecorator | MethodDecorator | ParameterDecorator>): void;
 }

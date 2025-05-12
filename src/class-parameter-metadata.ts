@@ -3,6 +3,7 @@ import { Metadata } from './metadata.js';
 import { Class, PropertyKey } from './types.js';
 
 export class ClassParameterMetadata extends Metadata {
+    readonly #propertyKey: undefined | PropertyKey;
     readonly #map: Map<unknown, unknown>;
 
     public constructor(
@@ -13,6 +14,7 @@ export class ClassParameterMetadata extends Metadata {
     ) {
         super();
 
+        this.#propertyKey = this.propertyKey ?? undefined;
         this.#map = new Map();
     }
 
@@ -42,5 +44,12 @@ export class ClassParameterMetadata extends Metadata {
 
     public delete(key: unknown): void {
         this.#map.delete(key);
+    }
+
+    public decorate(decorators: ReadonlyArray<ClassDecorator | PropertyDecorator | MethodDecorator | ParameterDecorator>): void;
+    public decorate(decorators: ReadonlyArray<(...args: ReadonlyArray<any>) => unknown>): void {
+        for (const decorator of decorators) {
+            decorator(this.target, this.#propertyKey, this.parameterIndex);
+        }
     }
 }

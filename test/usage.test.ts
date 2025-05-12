@@ -58,4 +58,10 @@ test('usage', (): void => {
 
     expect(methodParameterMetadata.getOwn('design:type')).toBe(String);
     expect(methodParameterMetadata.getOwn(EXAMPLE)).toBe('quux');
+
+    classMetadata.decorate([
+        Example('corge'),
+    ]);
+
+    expect(classMetadata.getOwn(EXAMPLE)).toBe('corge');
 });

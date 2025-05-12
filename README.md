@@ -111,6 +111,18 @@ expect(methodParameterMetadata.getOwn('design:type')).toBe(String);
 expect(methodParameterMetadata.getOwn(EXAMPLE)).toBe('quux');
 ```
 
+You can also apply decorators dynamically.
+
+No descriptor is passed to the decorator, and the returned value is ignored.
+
+```typescript
+classMetadata.decorate([
+    Example('corge'),
+]);
+
+expect(classMetadata.getOwn(EXAMPLE)).toBe('corge');
+```
+
 ## License
 
 Distributed under the MIT License. See the [LICENSE](https://github.com/choi-jack/class-metadata/blob/main/LICENSE) file for more details.

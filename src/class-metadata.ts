@@ -62,4 +62,11 @@ export class ClassMetadata extends Metadata {
     public delete(key: unknown): void {
         Reflect.deleteMetadata(key, this.target, this.#propertyKey);
     }
+
+    public decorate(decorators: ReadonlyArray<ClassDecorator | PropertyDecorator | MethodDecorator | ParameterDecorator>): void;
+    public decorate(decorators: ReadonlyArray<(...args: ReadonlyArray<any>) => unknown>): void {
+        for (const decorator of decorators) {
+            decorator(this.target, this.#propertyKey);
+        }
+    }
 }
